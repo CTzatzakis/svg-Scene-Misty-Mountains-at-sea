@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!-- Stars -->
+<svg id="stars-container"  preserveAspectRatio="none">
+  <g id="stars" >
+    <!-- 
+        The d attribute defines a path to be drawn. A path definition is a list of path commands where each command is composed of a command letter and numbers that represent the command 
+        parameters. The commands are detailed below.
+        
+        For <path>, d is a string containing a series of path commands that define the path to be drawn.
+
+        Path commands
+        SVG defines 6 types of path commands, for a total of 20 commands:  
+          MoveTo: M, m
+          LineTo: L, l, H, h, V, v
+          Cubic Bézier Curve: C, c, S, s
+          Quadratic Bézier Curve: Q, q, T, t
+          Elliptical Arc Curve: A, a
+          ClosePath: Z, z
+
+        Draw a cubic Bézier curve from the current point to the end point, which is the current point shifted by dx along the x-axis and dy along the y-axis. The start control point is 
+        the current point (starting point of the curve) shifted by dx1 along the x-axis and dy1 along the y-axis. The end control point is the current point (starting point of the curve) 
+        shifted by dx2 along the x-axis and dy2 along the y-axis. Any subsequent triplet(s) of coordinate pairs are interpreted as parameter(s) for implicit relative cubic Bézier curve 
+        (c) command(s).
+
+        Formulae:
+          Po′ = Pn = {xo + dx, yo + dy} ;
+          Pcs = {xo + dx1, yo + dy1} ;
+          Pce = {xo + dx2, yo + dy2} 
+
+    -->
+    <path id="star1"  d="M432 147.7
+                          c.1.6.8.9 1.1 1.5-.9.2-2.3-.6-2.3-1.2"/>
+    <path id="star2"  d="M720.8 392.6
+                          c.5 1.3-1 1.2-1.8 2.4.3-1.5-.4-2.5.9-2.9"/>
+    <path id="star3"  d="M346 14.6
+                          c0 .6-.4.9-1.1.9-.5-.1-.9-.4-.9-.9"/>
+    <path id="star4"  d="M0 233.1
+                          c.5 0 .9.3.9.8s-.3.8-.8.9"/>
+    <path id="star5"  d="M562.6 202.3
+                          c-.4-.1-.7-.4-.7-.8 0-.6.3-.9.9-.9"/>
+    <path id="star6"  d="M996.2 351.6
+                          c0 .5-.3.9-.8 1-.6.1-.9-.3-.9-.8"/>
+    <path id="star7"  d="M716.7 90
+                          c.6.1.9.4.8 1-.1.5-.5.9-1.1.7"/>
+    <path id="star8"  d="M982.9 456.4
+                          c-.5 0-.9-.3-.9-.9 0-.5.4-.8 1-.8"/>
+    <path id="star10"  d="M898.4 230.9
+                          c.6.1.9.5.8 1-.1.5-.6.8-1.1.6"/>
+    <path id="star11"  d="M1028.7 2
+                          c-.1 0-.3 0-.4.1-.6-.5-.8-1.1-.1-1.7"/>
+    <path id="star12"  d="M1109.5 152.3
+                          c0 .4-.2.8-.7.8-.6.1-1-.2-1-.8"/>
+    <path id="star13"  d="M665.6 159.4
+                          c-.1-.5.2-.9.8-1 .6 0 1 .2 1 .8"/>
+    <path id="star14"  d="M57.6 91.2
+                          c-.6.2-.9-.2-.9-.8 0-.5.4-.8.9-.9"/>
+    <path id="star15"  d="M890.2 51.1
+                          c0-.4.3-.7.7-.7.5 0 .7.3.8.7"/>
+    <path id="star16"  d="M1042.3 8.2
+                          c-.5.1-1 0-1.1-.6-.1-.4.1-.7.6-.8"/>
+    <path id="star17"  d="M808.4 447.5
+                          c-.1.4-.4.6-.8.6-.6 0-.8-.5-.7-1"/>
+    <path id="star18"  d="M416.4 256.3
+                          c0-.5.3-.9.9-.8.4 0 .8.2.8.7"/>
+    <path id="star19"  d="M997.6 28.8
+                          c.2 0 .5.3.6.5.1.4-.1.7-.6.8"/>
+    <path id="star20"  d="M103.8 432
+                          c-.1 0-.3 0-.4.1-.6-.5-.8-1.1-.1-1.7"/>
+    <path id="star21"  d="M370.6 201.4
+                          c.1.4-.2.7-.7.7-.2 0-.5-.3-.5-.5"/>
+    <path id="star22"  d="M334.5 50.6 
+                          c0 .4-.2.8-.6.8-.6.1-1-.1-1.1-.6"/>
+    <path id="star23"  d="M166.3 409.9
+                          c.6.1.9.5.8 1-.1.5-.6.8-1.1.6"/>
+    <path id="star24"  d="M292.7 298.3
+                          c-.2.5-.6.8-1.1.6-.5-.1-.8-.6-.6-1.1"/>
+    <path id="star25"  d="M987 131.8
+                          c.6.1.9.4.8.9-.2.6-.6.9-1.1.7"/>
+    <path id="star26"  d="M647.6 396.4
+                          c-.8.4-1.1.7-1.3.6-.2 0-.3-.4-.5-.6"/>
+    <path id="star27"  d="M635.3 384
+                          c-.2-.5 0-.9.6-1.1.6-.1.9.2 1.1.7"/>
+    <path id="star28"  d="M74.1 171.6
+                          c0 .6-.3 1.1-1.1 1-.6-.1-.8-.5-.8-1"/>
+  </g>
+</svg>
+
+
+<div class="scene">
+
+  <div id="sky">
+    <div id="cloud-circle-back"> </div>
+    <div id="cloud-circle-mid"> </div>
+    <div id="cloud-circle-front"> </div>
+
+    <div id="cloud1-circle-back"> </div>
+    <div id="cloud1-circle-mid"> </div>
+    <div id="cloud1-circle-front"> </div>
+
+    <div id="mountain-1"></div>
+    <div id="mountain-2"></div>
+    <div class="fog" id="top-fog"></div>
+  </div>
+  <div id="water">
+    <div id="water-waves">
+      <div class="fog" id="reflection-fog"></div>
+      <div id="mountain-1-reflect"></div>
+    </div>
+  </div>
+
+<svg>
+  <!-- Sea wave effect -->
+  <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+    <feTurbulence id="sea-filter" numOctaves="3" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
+    <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
+    <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" 
+    keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
+  </filter>
+<!-- mountain effect -->
+  <filter id="mtn-filter">
+    <feTurbulence id="turbwave" type="fractalNoise" baseFrequency="0.01" numOctaves="3"/>
+    <feDisplacementMap in="SourceGraphic" scale="50"/>
+  </filter>
+<!-- fog cloud effect -->  
+  <filter id="cloudy-filter">
+    <feTurbulence id="turbwave" type="fractalNoise" baseFrequency="0.01" seed="54" numOctaves="3" />
+        <feDisplacementMap in="SourceGraphic" scale="50" />
+  </filter>
+  <!-- fog move effect -->
+  <filter id="turbulenceC" x="0" y="0" width="100%" height="100%">
+    <feTurbulence id="turboCloudWave" type="fractalNoise" seed="54" baseFrequency="0.001 0.002" numOctaves="3" />
+    <feDisplacementMap in="SourceGraphic" scale="50" />
+    <animate xlink:href="#turboCloudWave" attributeName="baseFrequency" dur="60s" 
+    keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
+  </filter>
+<!-- realistic cloud effect -->
+    <!-- Back Layer -->
+    <filter id="filter-back">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" />
+      <feDisplacementMap  in="SourceGraphic" scale="270" />
+    </filter>
+    <!-- Middle Layer -->
+    <filter id="filter-mid">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" />
+      <feDisplacementMap  in="SourceGraphic" scale="150" />
+    </filter>
+    <!-- Front Layer -->
+    <filter id="filter-front">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" />
+      <feDisplacementMap  in="SourceGraphic" scale="100" />
+    </filter>
+</svg>
+
+
+</div>
+</body>
+
+</html>

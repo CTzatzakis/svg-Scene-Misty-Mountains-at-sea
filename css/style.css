@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow: hidden;
+  background: #000;
+  position: relative;
+
+}
+svg#stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;  
+}
+svg g path {
+  stroke-width: 1px;
+  stroke: #fff;
+}
+
+/*
+* vw   Relative to 1% of the width of the viewport*  
+* vh  Relative to 1% of the height of the viewport*
+*/
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+  /*Sun rise sky gradient effect bottom right to top left*/
+  background: -webkit-radial-gradient(110% 90%, 150vw 60vh, #c78239 0%, #10263d 55%, rgba(8, 28, 54, 0.3) 125%, transparent 150%);
+  overflow: hidden;
+  position: absolute;
+  min-width: 1280px;
+}
+
+#water {
+  background: linear-gradient(0deg, #050f1c 20%, rgba(32, 35, 41, 0.8) 120%);
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+
+}
+#water-waves {
+  background: linear-gradient(0deg, #050f1c 20%, rgba(32, 35, 41, 0.8) 120%);
+  width: 100%;
+  height: 100%;
+  /*create water movement effect*/
+  filter: url("#turbulence");
+}
+#mountain-1 {
+  height: 80vh;
+  width: 100vw;
+  bottom: -40vh;
+  left: -35vw;
+  position: absolute;
+  transform: rotate(19deg);
+  background: linear-gradient(0deg,#12181e 88%, #141313 100%);
+  
+  filter: url(#mtn-filter) blur(0.5px);
+}
+
+#mountain-2 {
+  height: 30vh;
+  width: 120vw;
+  border: 1px solid rgba(255, 220, 188, 0.4);
+  bottom: 0;
+  left: 10vw;
+  position: absolute;
+  z-index: 0;
+  transform: rotate(-10deg);
+  background: linear-gradient(0deg, #202329 90%, #503e3e 100%);
+  filter: url(#mtn-filter) blur(0.5px);
+}
+
+.fog {
+  z-index: 0;
+  transform: skew(30deg, 0deg);
+  background: transparent;
+  position: absolute;
+  width: 130vw;
+  left: -15vw;
+  height: 90px;
+  filter: url(#cloudy-filter);
+/*   box-shadow: 0px 200px 20px 0px rgba(255, 255, 255, 0.4); */
+}
+
+#top-fog {
+  /*     background: coral; */
+  bottom: 40%;
+  box-shadow: 0px 200px 60px 0px rgba(192, 194, 197, 0.9);
+  filter: url("#turbulenceC");
+}
+
+#reflection-fog {
+  height: 85px;
+  transform-origin: 50% 50%;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1) rotate(180deg) skew(30deg, 0deg);
+  background: transparent;
+  top: 150px;
+  box-shadow: 0px 210px 60px 0px rgba(255, 255, 255, 0.3);
+}
+
+#cloud-circle-back {
+  width: 100px;
+  height: 58px;
+  background: #000;
+  border-radius: 50%;
+  filter: url(#filter-back);
+  box-shadow: 400px 400px 60px 0px #fff; /* Increase shadow offset */
+  position: absolute; /* Take the parent out of the document flow */
+  top: -150px; /* Move a little down */
+  left: -150px; /* Move a little right */
+}
+#cloud-circle-mid {
+  width: 100px;
+  height: 58px;
+  background: #000;
+  border-radius: 50%;
+  filter: url(#filter-mid);
+  box-shadow: 400px 400px 60px 0px #fff; /* Increase shadow offset */
+  position: absolute; /* Take the parent out of the document flow */
+  top: -150px; /* Move a little down */
+  left: -150px; /* Move a little right */
+}
+#cloud-circle-front {
+  width: 100px;
+  height: 58px;
+  background: #000;
+  border-radius: 50%;
+  filter: url(#filter-front);
+  box-shadow: 400px 400px 60px 0px #888; /* Increase shadow offset */
+  position: absolute; /* Take the parent out of the document flow */
+  top: -150px; /* Move a little down */
+  left: -150px; /* Move a little right */
+}
+
+
+#cloud1-circle-back {
+  width: 400px;
+  height: 116px;
+  background: #000;
+  border-radius: 50%;
+  filter: url(#filter-back);
+  box-shadow: 400px 200px 80px 0px #fff; /* Increase shadow offset */
+  position: absolute; /* Take the parent out of the document flow */
+  top: -150px; /* Move a little down */
+  left: 150px; /* Move a little right */
+}
+#cloud1-circle-mid {
+  width: 400px;
+  height: 116px;
+  background: #000;
+  border-radius: 50%;
+  filter: url(#filter-mid);
+  box-shadow: 400px 200px 80px 0px #fff; /* Increase shadow offset */
+  position: absolute; /* Take the parent out of the document flow */
+  top: -150px; /* Move a little down */
+  left: 150px; /* Move a little right */
+}
+#cloud1-circle-front {
+  width: 400px;
+  height: 116px;
+  background: #000;
+  border-radius: 50%;
+  filter: url(#filter-front);
+  box-shadow: 400px 200px 80px 0px #aaa; /* Increase shadow offset */
+  position: absolute; /* Take the parent out of the document flow */
+  top: -150px; /* Move a little down */
+  left: 150px; /* Move a little right */
+}
