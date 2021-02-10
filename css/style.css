@@ -53,23 +53,24 @@ svg g path {
   filter: url("#turbulence");
 }
 #mountain-1 {
-  height: 80vh;
-  width: 100vw;
-  bottom: -40vh;
-  left: -35vw;
+  height: 80%;
+  width: 100%;
+  bottom: -40%;
+  left: -35%;
   position: absolute;
   transform: rotate(19deg);
-  background: linear-gradient(0deg,#12181e 88%, #141313 100%);
+  background: linear-gradient(0deg,#120e0e 88%, #141313 100%);
+  border: 1px solid rgba(255, 220, 188, 0.1);
   
   filter: url(#mtn-filter) blur(0.5px);
 }
 
 #mountain-2 {
-  height: 30vh;
-  width: 120vw;
+  height: 30%;
+  width: 120%;
   border: 1px solid rgba(255, 220, 188, 0.4);
   bottom: 0;
-  left: 10vw;
+  left: 10%;
   position: absolute;
   z-index: 0;
   transform: rotate(-10deg);
@@ -82,8 +83,8 @@ svg g path {
   transform: skew(30deg, 0deg);
   background: transparent;
   position: absolute;
-  width: 130vw;
-  left: -15vw;
+  width: 130%;
+  left: -15%;
   height: 90px;
   filter: url(#cloudy-filter);
 /*   box-shadow: 0px 200px 20px 0px rgba(255, 255, 255, 0.4); */
